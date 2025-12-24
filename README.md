@@ -8,6 +8,8 @@ Aplikasi ini mengimplementasikan Role-Based Access Control (RBAC), integrasi Web
 1. Autentikasi & Sesi
    - Halaman Utama (index.html): Pengguna disambut dengan form Login dan Registrasi.
    - Registrasi: Pengguna baru diwajibkan mendaftarkan username, password, dan memilih role (Admin atau Staff).
+      PS : Saya sudah membuat 2 akun / user dengan berbeda role -> 1. username : carlos (Admin) , gerardi (Staff)
+                                                                   2. password : 123456 , password : 123456
    - Login: Setelah masuk, token keamanan (JWT) akan disimpan di sessionStorage (Sesi akan hilang jika tab browser ditutup).
 
 2. Dashboard & Manajemen Data (RBAC)
