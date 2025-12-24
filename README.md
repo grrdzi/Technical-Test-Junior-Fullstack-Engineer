@@ -37,7 +37,7 @@ Aplikasi ini mengimplementasikan Role-Based Access Control (RBAC), integrasi Web
 
 ⚙️ Instruksi Instalasi & Menjalankan Aplikasi
 1. Persiapan Database
-   - Buat database MySQL bernama inventory_db.
+   - Buat database MySQL bernama gofiber_test_db.
    - Sesuaikan kredensial database pada file config/database.go.
 
 2. Menjalankan Backend
