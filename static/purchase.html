@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Purchase - Inventory System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <style>
+        .nav-link { cursor: pointer; }
+        #roleBadge { font-size: 0.8rem; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">Inventory System</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="purchase.html">New Purchase</a></li>
+                    <li class="nav-item admin-only"><a class="nav-link text-warning" href="suppliers.html">Suppliers</a></li>
+                    <li class="nav-item admin-only"><a class="nav-link text-warning" href="items.html">Manage Items</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <span id="roleBadge" class="badge rounded-pill me-3"></span>
+                    <button id="btnLogout" class="btn btn-outline-danger btn-sm">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card shadow-sm p-4">
+            <h2 class="mb-4">Create Purchase</h2>
+            <div class="mb-3">
+                <label class="form-label">Supplier</label>
+                <select id="supplier" class="form-select"></select>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Item</label>
+                    <select id="item" class="form-select"></select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Qty</label>
+                    <input type="number" id="qty" class="form-control" min="1" value="1">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">&nbsp;</label>
+                    <button id="btnAdd" class="btn btn-primary w-100">Tambah ke Cart</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTable"></tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <button id="btnSubmit" class="btn btn-success px-4">Submit Purchase</button>
+                <div id="result" class="text-success fw-bold"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/purchase.js"></script>
+</body>
+</html>
